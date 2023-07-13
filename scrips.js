@@ -53,7 +53,7 @@ function hasAppropriateRange(squaresPerSide) {
     return squaresPerSide > 0 && squaresPerSide <= 100;
 }
 
-const gridButton = document.querySelector('#change-grid-button');
+const gridButton = document.querySelector('#grid-button');
 gridButton.addEventListener('click', () => {
     const squaresPerSide = getSquaresPerSide();
     changeGrid(squaresPerSide);
