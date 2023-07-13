@@ -2,7 +2,7 @@ const DEFAULT_NUMBER_OF_SQUARES_PER_SIDE = 16;
 const HOVERING_SQUARE_COLOR = 'orange';
 const SKETCH_FIELD_WIDTH = 500;
 
-const container = document.querySelector('#container');
+const container = document.querySelector('#grid-container');
 
 function createGrid(squaresPerSide) {
     const totalSquares = squaresPerSide * squaresPerSide;
