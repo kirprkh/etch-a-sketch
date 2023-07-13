@@ -39,3 +39,16 @@ function changeGrid(squaresPerSide) {
     removeGrid();
     createGrid(squaresPerSide);
 }
+
+function getSquaresPerSide() {
+    const squaresPerSide = +prompt('Squares per side?');
+    if (!Number.isInteger(squaresPerSide) 
+    || !hasAppropriateRange(squaresPerSide)) {
+        return DEFAULT_NUMBER_OF_SQUARES_PER_SIDE;
+    }
+    return squaresPerSide;
+}
+
+function hasAppropriateRange(squaresPerSide) {
+    return squaresPerSide > 0 && squaresPerSide <= 100;
+}
