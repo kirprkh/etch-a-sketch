@@ -11,10 +11,8 @@
 }
 
 .square {
-    border: 2px solid gray;
-    height: 55px;
-    width: 55px;
-    margin: 10px;
+    border: 0.05px solid lightgrey;
+    box-sizing: border-box;
 }
 
 #grid-container {
