@@ -28,3 +28,9 @@ function createGrid(squaresPerSide) {
 function calculateSquareSide(squaresPerSide) {
     return `${SKETCH_FIELD_WIDTH / squaresPerSide}px`;
 }
+
+function removeGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild);
+    }
+}
