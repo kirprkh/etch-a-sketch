@@ -52,3 +52,25 @@ function getSquaresPerSide() {
 function hasAppropriateRange(squaresPerSide) {
     return squaresPerSide > 0 && squaresPerSide <= 100;
 }
+
+const gridButton = document.querySelector('#change-grid-button');
+gridButton.addEventListener('click', () => {
+    const squaresPerSide = getSquaresPerSide();
+    changeGrid(squaresPerSide);
+});
+
+const borderButton = document.querySelector('#border-button');
+borderButton.addEventListener('click', () => {
+    if (borderButton.textContent.includes('Hide')) {
+        document.querySelectorAll('.square').forEach(square => square.classList.add('no-border'));
+        borderButton.textContent = 'Show border';
+    } else {
+        document.querySelectorAll('.square').forEach(square => square.classList.remove('no-border'));
+        borderButton.textContent = 'Hide border';
+    }
+});
+
+const clearButton = document.querySelector('#clear-button');
+clearButton.addEventListener('click', () => {
+    document.querySelectorAll('.square').forEach(square => square.style.backgroundColor = 'white');
+});
