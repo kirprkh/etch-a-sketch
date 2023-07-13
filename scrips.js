@@ -74,3 +74,5 @@ const clearButton = document.querySelector('#clear-button');
 clearButton.addEventListener('click', () => {
     document.querySelectorAll('.square').forEach(square => square.style.backgroundColor = 'white');
 });
+
+createGrid(DEFAULT_NUMBER_OF_SQUARES_PER_SIDE);
