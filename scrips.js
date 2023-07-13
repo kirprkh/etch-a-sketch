@@ -34,3 +34,8 @@ function removeGrid() {
         container.removeChild(container.lastChild);
     }
 }
+
+function changeGrid(squaresPerSide) {
+    removeGrid();
+    createGrid(squaresPerSide);
+}
